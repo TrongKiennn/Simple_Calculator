@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./build/tailwind.css">
+    <script type="text/javascript" src="./script.js"></script>
+</head>
+<body >
+    <h1 class="text-center font-bold text-6xl m-4">Calculator</h1>
+    <div class="grid grid-cols-3 gap-2 w-full">
+        <div class="">
+            <div class="">
+                <h1 class="text-center text-4xl font-bold">Notification</h1>
+                <p id="notification" class="error text-center text-red-500 font-bold p-4"></p>
+            </div>
+            
+        </div>
+        <div class="flex flex-col">
+            <div class="m-2 flex justify-center h-16">
+                <input class="p-2 border rounded w-2/3" type="text" id="valueA" placeholder="Nhập số A" />
+            </div>
+            <div class="m-2 flex justify-center h-16 ">
+                <input class="p-2 border rounded w-2/3" type="text" id="valueB" placeholder="Nhập số B"/>
+            </div>
+            <div class="m-2 flex justify-center h-16">
+                <input class="p-2 border rounded w-2/3 text-gray-400" type="text" id="result" disabled="disabled" value="Kết quả" /><br><br>
+            </div>
+        </div>
+      
+        <div class="p-2 ">
+            <div class="grid grid-cols-2 gap-4 w-2/3 mx-auto">
+                <input type="button" id="add" value="+" onclick="selectOperation('add')" class="w-full h-16 bg-gray-200 rounded text-xl font-bold"/>
+                <input type="button" id="sub" value="-" onclick="selectOperation('sub')" class="w-full h-16 bg-gray-200 rounded text-xl font-bold"/>
+                <input type="button" id="mul" value="x" onclick="selectOperation('mul')" class="w-full h-16 bg-gray-200 rounded text-xl font-bold"/>
+                <input type="button" id="div" value="/" onclick="selectOperation('div')" class="w-full h-16 bg-gray-200 rounded text-xl font-bold"/>
+            </div>
+            <div class="mt-4  w-2/3 mx-auto">
+                <button id="Cal" onclick="calculate()" class="w-full h-16 bg-blue-500 text-white rounded text-lg font-bold">Calculation</button>
+            </div>
+            
+      
+        </div>
+    </div>  
+</body>
+</html>
